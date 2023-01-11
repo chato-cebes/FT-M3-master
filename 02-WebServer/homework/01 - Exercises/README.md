@@ -148,11 +148,11 @@ Hasta ahora ya creamos nuestra primera ruta que nos responde con un JSON. Para p
 
 1. Declarar un condicional que verifique si `req.url` es igual "_/allDogs_".
 
-2. En el caso de que esto sea verdadero, volveremos a utilizar la propiedad _readFile_ del objeto **fs**.
+2. En el caso de que esto sea verdadero, volveremos a utilizar la propiedad _readFile_ del objeto **fs**.utils/allDogs.html
 
 3. Este callback recibirá tres parámetros.
 
-   -  **String:** este string debe ser la ruta que dirija al archivo `utils/allDogs.html`.
+   -  **String:** este string debe ser la ruta que dirija al archivo ``.
 
    -  **String:** este string debe decir `UTF8`.
 
