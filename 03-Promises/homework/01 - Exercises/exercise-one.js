@@ -1,5 +1,6 @@
 "use strict";
 
+const { blue } = require("./utils");
 let exerciseUtils = require("./utils");
 
 let args = process.argv.slice(2).map(function (st) {
@@ -19,34 +20,50 @@ args.forEach(function (arg) {
 });
 
 function problemA() {
-  // callback version
-  exerciseUtils.readFile("poem-one/stanza-02.txt", function (err, stanza2) {
+  /* // callback version
+   exerciseUtils.readFile("poem-one/stanza-02.txt", function (err, stanza2) {
     exerciseUtils.blue(stanza2);
     exerciseUtils.readFile("poem-one/stanza-03.txt", function (err, stanza3) {
       exerciseUtils.blue(stanza3);
     });
-  });
+  }); 
+  */
 
   // promise version
   // Tu código acá:
+
+  exerciseUtils
+    .promisifiedReadFile("poem-one/stanza-02.txt")
+    .then((value1) => {
+      exerciseUtils.blue(value1);
+      return exerciseUtils.promisifiedReadFile("poem-one/stanza-03.txt");
+    })
+    .then((value2) => {
+      exerciseUtils.blue(value2);
+      console.log("done");
+    });
 }
 
 function problemB() {
   // callback version
-  exerciseUtils.readFile(
+  /* exerciseUtils.readFile(
     "poem-one/wrong-file-name.txt",
     function (err, stanza4) {
       if (err) exerciseUtils.magenta(new Error(err));
       else exerciseUtils.blue(stanza4);
     }
-  );
+  ); */
 
   // promise version
   // Tu código acá:
+  exerciseUtils.promisifiedReadFile("poem-one/wrong-file-name.txt").then(
+    (value) => exerciseUtils.blue(value),
+    (error) => exerciseUtils.magenta(new Error(error))
+  );
 }
 
 function problemC() {
-  // callback version
+  /* // callback version
   exerciseUtils.readFile("poem-one/stanza-03.txt", function (err, stanza3) {
     if (err) return exerciseUtils.magenta(new Error(err));
     exerciseUtils.blue(stanza3);
@@ -57,8 +74,21 @@ function problemC() {
         exerciseUtils.blue(stanza4);
       }
     );
-  });
+  }); */
 
   // promise version
   // Tu código acá:
+  exerciseUtils.promisifiedReadFile("poem-one/stanza-03.txt")
+  .then(stanza3 =>{
+   exerciseUtils.blue(stanza3);
+   return exerciseUtils.promisifiedReadFile("poem-one/stanza-04.txt")
+  })
+   .then(stanza4 =>{
+    exerciseUtils.blue(stanza4);
+  })
+  .catch (err=>{
+    exerciseUtils.magenta(new Error(err))
+  })
+
+
 }

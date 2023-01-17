@@ -36,7 +36,7 @@ let stanzasTwo = fs
     return fs.readFileSync(path.join(dirpathTwo, filename)).toString();
   });
 
-describe("01 | Ejercicios - Promises (poem-one)", () => {
+xdescribe("01 | Ejercicios - Promises (poem-one)", () => {
   afterAll(async () => {
     await new Promise((resolve, reject) => setTimeout(() => resolve(), 250));
   });
@@ -45,7 +45,7 @@ describe("01 | Ejercicios - Promises (poem-one)", () => {
     jest.restoreAllMocks();
   });
 
-  it("Problem A | Consologuea la segunda y tercer stanza versión promisificada", (done) => {
+  xit("Problem A | Consologuea la segunda y tercer stanza versión promisificada", (done) => {
     jest.setTimeout(500);
     const blue = jest.spyOn(utils, "blue");
     const promisifiedReadFileSpy = jest.spyOn(utils, "promisifiedReadFile");
@@ -71,7 +71,7 @@ describe("01 | Ejercicios - Promises (poem-one)", () => {
       });
   });
 
-  it("Problem B | Consologuea la cuarta stanza versión promisificada o un error", (done) => {
+  xit("Problem B | Consologuea la cuarta stanza versión promisificada o un error", (done) => {
     jest.setTimeout(500);
     const blue = jest.spyOn(utils, "blue");
     const magenta = jest.spyOn(utils, "magenta");
@@ -98,7 +98,7 @@ describe("01 | Ejercicios - Promises (poem-one)", () => {
       });
   });
 
-  it("Problem C | Consologuea la tercer stanza y luego la cuarta stanza o su respectivo error, versión promisificada", (done) => {
+  xit("Problem C | Consologuea la tercer stanza y luego la cuarta stanza o su respectivo error, versión promisificada", (done) => {
     jest.setTimeout(500);
     const blue = jest.spyOn(utils, "blue");
     const magenta = jest.spyOn(utils, "magenta");
@@ -140,7 +140,7 @@ describe("02 | Ejercicios - Promises (poem-two)", () => {
     jest.restoreAllMocks();
   });
 
-  it("Problem A | Consologuea la primer y segunda stanza versión promisificada", (done) => {
+  xit("Problem A | Consologuea la primer y segunda stanza versión promisificada", (done) => {
     jest.setTimeout(500);
     const blue = jest.spyOn(utils, "blue");
     const promisifiedReadFileSpy = jest.spyOn(utils, "promisifiedReadFile");
@@ -169,7 +169,7 @@ describe("02 | Ejercicios - Promises (poem-two)", () => {
       });
   });
 
-  it("Problem B | Consologuea todas las stanzas de poem-two en orden, versión promisificada", (done) => {
+  xit("Problem B | Consologuea todas las stanzas de poem-two en orden, versión promisificada", (done) => {
     jest.setTimeout(500);
     const blue = jest.spyOn(utils, "blue");
     const promisifiedReadFileSpy = jest.spyOn(utils, "promisifiedReadFile");

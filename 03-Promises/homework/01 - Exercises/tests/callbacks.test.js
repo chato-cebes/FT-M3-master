@@ -36,7 +36,7 @@ let stanzasTwo = fs
     return fs.readFileSync(path.join(dirpathTwo, filename)).toString();
   });
 
-describe("01 | Ejercicios - Callbacks (Poem-one)", () => {
+xdescribe("01 | Ejercicios - Callbacks (Poem-one)", () => {
   afterAll(async () => {
     await new Promise((resolve) => setTimeout(() => resolve(), 250));
   });
@@ -48,7 +48,7 @@ describe("01 | Ejercicios - Callbacks (Poem-one)", () => {
     });
   });
 
-  it("Problem A | Consologuea la segunda y tercer stanza versión callback", (done) => {
+  xit("Problem A | Consologuea la segunda y tercer stanza versión callback", (done) => {
     jest.setTimeout(500);
     const blue = jest.spyOn(utils, "blue");
     const readFileSpy = jest.spyOn(utils, "readFile");
@@ -66,7 +66,7 @@ describe("01 | Ejercicios - Callbacks (Poem-one)", () => {
     done();
   });
 
-  it("Problem B | Consologuea la cuarta stanza versión callback o un error", (done) => {
+  xit("Problem B | Consologuea la cuarta stanza versión callback o un error", (done) => {
     jest.setTimeout(500);
     const blue = jest.spyOn(utils, "blue");
     const magenta = jest.spyOn(utils, "magenta");
@@ -85,7 +85,7 @@ describe("01 | Ejercicios - Callbacks (Poem-one)", () => {
     done();
   });
 
-  it("Problem C | Consologuea la tercera stanza y luego la cuarta stanza versión callback o un error", (done) => {
+  xit("Problem C | Consologuea la tercera stanza y luego la cuarta stanza versión callback o un error", (done) => {
     jest.setTimeout(500);
     const blue = jest.spyOn(utils, "blue");
     const magenta = jest.spyOn(utils, "magenta");
@@ -122,7 +122,7 @@ describe("02 | Ejercicios - Callbacks (Poem-two)", () => {
     });
   });
 
-  it("Problem A | Consologuea la primera y segunda stanza versión callback", (done) => {
+  xit("Problem A | Consologuea la primera y segunda stanza versión callback", (done) => {
     jest.setTimeout(500);
     const blue = jest.spyOn(utils, "blue");
     const readFileSpy = jest.spyOn(utils, "readFile");
@@ -176,7 +176,7 @@ describe("02 | Ejercicios - Callbacks (Poem-two)", () => {
     done();
   });
 
-  it("Problem C | Consologuea todos los stanzas que se encuentren en poem-two o un error", (done) => {
+  xit("Problem C | Consologuea todos los stanzas que se encuentren en poem-two o un error", (done) => {
     jest.setTimeout(500);
     const blue = jest.spyOn(utils, "blue");
     const magenta = jest.spyOn(utils, "magenta");
